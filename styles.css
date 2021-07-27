@@ -16,6 +16,7 @@ body {
     #194358 10%,
     #091921 20%
   );
+  overflow: hidden;
 }
 body::before {
   content: "";
@@ -310,5 +311,53 @@ body::after {
   }
   100% {
     transform: translate(52vw, -29vh) rotate(360deg);
+  }
+}
+
+/*.glowing {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.glo {
+  position: absolute;
+  /*top: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+  top: 10vh;
+  left: 10vw;
+}
+.glo:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1500px;
+  width: 15px;
+  height: 15px;
+  background: #377a98;
+  border-radius: 50%;
+*/
+div i {
+  z-index: -22;
+  position: absolute;
+  background: #377a98;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #377a98, 0 0 16px #377a98, 0 0 24px #377a98,
+    0 0 32px #377a98;
+  animation: animate linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

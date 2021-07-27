@@ -8,6 +8,14 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+
+<div class="glowing">
+    <div class="glo" style="--i:1;"></div>
+        <div class="glo" style="--i:2;"></div>
+    <div class="glo" style="--i:3;"></div>
+    <div class="glo" style="--i:4;"></div>
+
+</div>
     <div class="vertical"></div>
     <div class="vertical1"></div>
     <div class="vertica2"></div>
@@ -22,7 +30,7 @@
     <div class="container your-element" data-tilt data-tilt-max="30" data-tilt-speed="300" data-tilt-perspective="600">
         <form class="calculator" name="calc">
              <input type="text" readonly class="value" name="txt">
-             <span class="num clear" onclick="calc.text.value= ''">c</span>
+             <span class="num clear" onclick="calc.txt.value 3= ''">c</span>
              <span class="num" onclick="document.calc.txt.value +='/'">/</span>
             <span class="num" onclick="document.calc.txt.value += '*'">*</span>
             <span class="num" onclick="document.calc.txt.value += '7'">7</span>
@@ -44,6 +52,37 @@
         
         </form>
     </div>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+
+
+        function stars()
+{
+    const count=200;
+    const div= document.querySelector('div');
+    var i = 0;
+
+while(i<count){
+    const star= document.createElement('i');
+    const x= Math.floor(Math.random() * window.innerWidth)
+    const y= Math.floor(Math.random() * window.innerHeight)
+
+const size= Math.random() * 4;
+star.style.left=x+ 'px';
+star.style.top=y + 'px';
+star.style.width=1 + size+ 'px';
+    star.style.height= 1 + size + 'px';
+
+    const duration = Math.random() * 2;
+star.style.animationDelay= duration + 's';
+star.style.animationDuration= 2+ duration+ 's';
+
+    div.appendChild(star);
+    i++;
+}
+}
+stars();
+    </script>
+
+   <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 </html>
